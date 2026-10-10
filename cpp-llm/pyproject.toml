@@ -1,0 +1,72 @@
+[build-system]
+requires = [“setuptools>=68”, “wheel”]
+build-backend = “setuptools.build_meta”
+
+[project]
+name = “cpp-llm”
+version = “0.1.0”
+description = “A GPT-style language model built with PyTorch for C++ code generation.”
+readme = “README.md”
+license = “MIT”
+requires-python = “>=3.10”
+authors = [
+{ name = “cpp-llm contributors” }
+]
+keywords = [
+“cpp”,
+“c++”,
+“pytorch”,
+“llm”,
+“transformer”,
+“deep-learning”,
+“code-generation”,
+“machine-learning”
+]
+classifiers = [
+“Development Status :: 3 - Alpha”,
+“Intended Audience :: Developers”,
+“License :: OSI Approved :: MIT License”,
+“Programming Language :: Python :: 3”,
+“Programming Language :: Python :: 3.10”,
+“Programming Language :: Python :: 3.11”,
+“Programming Language :: Python :: 3.12”,
+“Topic :: Scientific/Engineering :: Artificial Intelligence”,
+“Topic :: Software Development”
+]
+dependencies = [
+“torch>=2.0.0”,
+“numpy>=1.24.0”,
+“tiktoken>=0.5.0”,
+“PyYAML>=6.0”
+]
+
+[project.optional-dependencies]
+dev = [
+“pytest>=7.0”,
+“ruff>=0.4.0”
+]
+
+[tool.setuptools.packages.find]
+where = [”.”]
+include = [“cpp_llm*”]
+
+[tool.pytest.ini_options]
+testpaths = [“tests”]
+python_files = [“test_*.py”]
+addopts = “-v”
+
+[tool.ruff]
+line-length = 88
+target-version = “py310”
+
+[tool.ruff.lint]
+select = [
+“E”,
+“F”,
+“I”,
+“UP”
+]
+
+[tool.ruff.format]
+quote-style = “double”
+indent-style = “space”
