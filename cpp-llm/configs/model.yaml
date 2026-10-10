@@ -1,0 +1,21 @@
+model:
+  vocab_size: 50257
+  block_size: 256
+  n_embd: 256
+  n_head: 4
+  n_layer: 4
+  dropout: 0.1
+
+training:
+  seed: 42
+  batch_size: 8
+  epochs: 5
+  learning_rate: 0.0003
+  weight_decay: 0.01
+  gradient_clip: 1.0
+  save_every_steps: 500
+  checkpoint_path: checkpoints/latest.pt
+
+data:
+  train_path: data/processed/train.bin
+  val_path: data/processed/val.bin
