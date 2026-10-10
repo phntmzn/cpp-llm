@@ -1,7 +1,3 @@
-Here’s a complete GitHub-ready `README.md` for your **cpp-llm** project, with installation instructions, project structure, training workflow, and usage examples.
-
-
-
 # C++ LLM
 
 **A GPT-style language model built with PyTorch to learn and generate C++ code.**
